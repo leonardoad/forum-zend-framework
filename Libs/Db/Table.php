@@ -166,7 +166,7 @@ class Db_Table extends Zend_Db_Table {
     }
 
     public function setDataFromRequest($post) {
-        $campos = $post->getEscaped();
+        $campos = $post->getUnescaped();
         $info = $this->info();
         foreach ($campos as $key => $value) {
             if ($this->checkIfColumnExist($key)) {
