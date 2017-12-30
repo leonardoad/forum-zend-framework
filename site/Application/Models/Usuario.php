@@ -384,24 +384,6 @@ class Usuario extends Db_Table {
                 $permissoes->setDeleted();
                 $permissoes->save();
 
-                $lLst = $this->getUserInterestsLst();
-                if ($lLst->countItens() > 0) {
-                    for ($i = 0; $i < $lLst->countItens(); $i++) {
-                        $Item = $lLst->getItem($i);
-                        $Item->setDeleted();
-                    }
-                    $lLst->save();
-                }
-
-                $lLst = $this->getUserTravelertypesLst();
-                if ($lLst->countItens() > 0) {
-                    for ($i = 0; $i < $lLst->countItens(); $i++) {
-                        $Item = $lLst->getItem($i);
-                        $Item->setDeleted();
-                    }
-                    $lLst->save();
-                }
-
                 parent::save();
                 break;
 
@@ -435,25 +417,6 @@ class Usuario extends Db_Table {
                     }
                 }
 
-                $lInterestLst = $this->getUserInterestsLst();
-
-                if ($lInterestLst->countItens() > 0) {
-                    for ($i = 0; $i < $lInterestLst->countItens(); $i++) {
-                        $Item = $lInterestLst->getItem($i);
-                        $Item->setid_usuario($this->getID());
-                        $Item->save();
-                    }
-                }
-
-                $TtLst = $this->getUserTravelertypesLst();
-
-                if ($TtLst->countItens() > 0) {
-                    for ($i = 0; $i < $TtLst->countItens(); $i++) {
-                        $Item = $TtLst->getItem($i);
-                        $Item->setid_usuario($this->getID());
-                        $Item->save();
-                    }
-                }
                 break;
         }
     }

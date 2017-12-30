@@ -59,11 +59,11 @@ class IndexController extends AbstractController {
 
         // =========== Menu  ==========
         // INDICADORES
-        $menuItem = new Ui_Element_MenuItem('home', 'Home', HTTP_REFERER . 'index/index', '', 'home');
+        $menuItem = new Ui_Element_MenuItem('home', 'Home', HTTP_REFERER . 'web/index', '', 'home');
         $mainMenu->addMenuItem($menuItem);
 
 //
-        $menu = new Ui_Element_MenuItem('Topics', 'Topics', HTTP_REFERER . 'web/index', '', 'commenting');
+        $menu = new Ui_Element_MenuItem('Topics', 'Topics', HTTP_REFERER . 'web/index', '', 'social');
         $mainMenu->addMenuItem($menu);
 
 //        $menu2 = new Ui_Element_MenuItem('Development', 'Development', '', '', '');

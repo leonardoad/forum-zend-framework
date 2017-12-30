@@ -102,10 +102,14 @@
 
                         <div class="serach-form"  >
                             <ul class="nav nav-tabs">
+
+                                <li>
+{*                                    {$formSearch}*}
+                                </li>
                                 <li class="active">
                                     <a href="logout" data-toggle="tab">Login</a>
                                 </li>
-                                <li class="active">
+                                <li >
                                     <a href="logout" data-toggle="tab">Logout</a>
                                 </li>
                             </ul>
@@ -132,6 +136,9 @@
 
                         <div class="serach-form"  >
                             <ul class="nav nav-tabs">
+                                <li>
+                                    {$formSearch}
+                                </li>
                                 <li class="">
                                     <a href="{$baseUrl}login" >Login</a>
                                 </li>
@@ -186,11 +193,11 @@
                 <!--
                 <li class="">
                     <a href="#quickview-notes" data-toggle="tab">Notes</a>
-                </li>
+                </li> -->
                 <li>
-                    <a href="#quickview-alerts" data-toggle="tab">Alerts</a>
+{*                    {$formSearch}*}
                 </li>
-                -->
+
                 <li class="active">
                     <a href="logout" data-toggle="tab">Login</a>
                 </li>

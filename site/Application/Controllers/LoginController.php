@@ -319,7 +319,7 @@ class LoginController extends AbstractController {
 
 //            Zend_Session::destroy();
         }
-        $br->setBrowserUrl(BASE_URL . 'index');
+        $br->setBrowserUrl(BASE_URL . 'web/index');
         $br->send();
     }
 

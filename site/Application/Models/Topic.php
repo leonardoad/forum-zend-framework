@@ -28,6 +28,17 @@ class Topic extends Db_Table {
         return $this->User->getNomecompleto();
     }
 
+    function getTotalPosts() {
+        $posts = new Post();
+        $posts->where('id_topic', $this->getID());
+
+        return $posts->count();
+    }
+
+    function getFormatedDescription() {
+        return nl2br($this->getDescription());
+    }
+
     function readLst($modo = 'obj') {
         parent::readLst($modo);
     }
